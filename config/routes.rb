@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   
   get 'signup', to: 'users#new'
   resources :users, only: [:index, :show, :create]
+  resources :diaries, only: [:show, :create, :destroy]
 end

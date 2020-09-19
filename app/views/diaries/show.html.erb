@@ -1,0 +1,9 @@
+<h5><%= link_to @diary.user.name, user_path(@diary.user) %> <span class="text-muted">posted at <%= @diary.created_at %></span></h5>
+
+<h5>題名</h5>
+<div class="border mb-3"><%= @diary.title %></div>
+
+<h5>本文</h5>
+<div class="border mb-4"><%= @diary.content %></div>
+
+<%= link_to 'Back', root_path, class: 'btn btn-primary' %>
