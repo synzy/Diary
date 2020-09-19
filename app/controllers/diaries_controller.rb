@@ -13,7 +13,7 @@ class DiariesController < ApplicationController
       flash[:success] = '日記を投稿しました'
       redirect_to root_url
     else
-      @diaries = current_user.diaries.order(id: :desc).page(params[:page])
+      @diaries = current_user.feed_diaries.order(id: :desc).page(params[:page])
       flash.now[:danger] = '日記の投稿に失敗しました'
       render  'toppages/index'
     end
