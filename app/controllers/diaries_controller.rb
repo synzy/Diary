@@ -3,7 +3,7 @@ class DiariesController < ApplicationController
   before_action :correct_user, only: [:destroy]
   
   def show
-    @diary = current_user.diaries.find_by(id: params[:id])
+    @diary = Diary.find_by(id: params[:id])
   end
 
   def create
