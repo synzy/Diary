@@ -4,6 +4,9 @@ class DiariesController < ApplicationController
   
   def show
     @diary = Diary.find_by(id: params[:id])
+    unless @diary
+      redirect_to root_url
+    end
   end
 
   def create
