@@ -4,7 +4,7 @@
     <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <% if logged_in? %>
-          <li class="nav-item"><%= link_to 'Home', root_path, class: 'nav-link' %></li>
+          <li class="nav-item"><%= link_to 'MyPage', user_path(current_user), class: 'nav-link' %></li>
           <li class="nav-item"><%= link_to 'User', users_path, class: 'nav-link' %></li>
           <li class="nav-item"><%= link_to 'Logout', logout_path, class: 'nav-link', method: :delete %></li>
         <% else %>
