@@ -1,7 +1,7 @@
 class Diary < ApplicationRecord
   belongs_to :user
   
-  has_many :favorites
+  has_many :favorites, dependent: :destroy
   has_many :like_users, through: :favorites, source: :user
   
   validates :title, presence: true, length: { maximum: 50 }
